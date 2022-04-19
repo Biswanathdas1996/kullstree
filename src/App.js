@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Registration from "./components/Registration";
 import Timeline from "./components/Timeline";
 import Layout from "./components/Layout";
+import Training from "./components/Training";
 const App = () => {
   return (
     <>
@@ -14,6 +15,7 @@ const App = () => {
               <Route path="/" element={<Timeline />} />
 
               <Route path="/register" element={<Registration />} />
+              <Route path="/trainings" element={<Training />} />
             </Routes>
           );
         }}
