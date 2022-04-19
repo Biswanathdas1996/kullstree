@@ -6,6 +6,7 @@ import CardMedia from "@mui/material/CardMedia";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import TrainingCard from "./TrainingCard";
+import { useNavigate } from "react-router-dom";
 
 const style = {
   position: "absolute",
@@ -31,6 +32,7 @@ export default function RecipeReviewCard({ data }) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  let history = useNavigate();
   return (
     <>
       <Modal
@@ -48,7 +50,7 @@ export default function RecipeReviewCard({ data }) {
             You need to complete the training to get started
           </Typography>
 
-          <TrainingCard data={trainingData} height="300" />
+          <TrainingCard data={trainingData} height="300" assesment={true} />
         </Box>
       </Modal>
 

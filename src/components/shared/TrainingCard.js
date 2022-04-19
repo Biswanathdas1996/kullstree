@@ -10,8 +10,10 @@ import { red } from "@mui/material/colors";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import { useNavigate } from "react-router-dom";
 
-export default function RecipeReviewCard({ data, height }) {
+export default function RecipeReviewCard({ data, height, assesment }) {
+  let history = useNavigate();
   return (
     <Card>
       <CardHeader
@@ -38,14 +40,25 @@ export default function RecipeReviewCard({ data, height }) {
         </Typography>
       </CardContent>
 
-      <button
-        className="btn btn-default btn-primary"
-        style={{ margin: 15 }}
-        type="button"
-        //   onClick={() => history("/trainings")}
-      >
-        Take training
-      </button>
+      {assesment ? (
+        <button
+          className="btn btn-default btn-secondary"
+          style={{ margin: 15, width: "10rem !important" }}
+          type="button"
+          onClick={() => history("/test")}
+        >
+          Take Assessment
+        </button>
+      ) : (
+        <button
+          className="btn btn-default btn-primary"
+          style={{ margin: 15 }}
+          type="button"
+          //   onClick={() => history("/trainings")}
+        >
+          Take training
+        </button>
+      )}
 
       <h5 style={{ fontSize: 15, margin: 20, float: "right" }}>
         Point:<b>100</b>

@@ -1,7 +1,9 @@
 import React from "react";
 import "./ProfileCard.css";
+import { useNavigate } from "react-router-dom";
 
 function ProfileCard(props) {
+  let history = useNavigate();
   return (
     <div className="card-container-profile">
       <div className="header-profile">
@@ -24,10 +26,22 @@ function ProfileCard(props) {
           <h1 className="bold-text">{props?.training}</h1>
           <h2 className="smaller-text">Training done</h2>
         </div>
-        <div className="photos">
-          <h1 className="bold-text">{props?.task}</h1>
-          <h2 className="smaller-text">Account opened</h2>
-        </div>
+
+        {!props?.buttonHide ? (
+          <button
+            className="btn btn-default btn-secondary"
+            style={{ float: "right", margin: 10 }}
+            type="button"
+            onClick={() => history("/profile")}
+          >
+            View profile
+          </button>
+        ) : (
+          <div className="photos">
+            <h1 className="bold-text">{props?.task}</h1>
+            <h2 className="smaller-text">Account opened</h2>
+          </div>
+        )}
       </div>
     </div>
   );

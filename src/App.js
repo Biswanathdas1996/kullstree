@@ -6,6 +6,8 @@ import Timeline from "./components/Timeline";
 import Layout from "./components/Layout";
 import Training from "./components/Training";
 import Products from "./components/Products";
+import Test from "./components/Test";
+import Profile from "./components/Profile";
 
 const App = () => {
   return (
@@ -19,6 +21,8 @@ const App = () => {
               <Route path="/register" element={<Registration />} />
               <Route path="/trainings" element={<Training />} />
               <Route path="/products" element={<Products />} />
+              <Route path="/test" element={<Test />} />
+              <Route path="/profile" element={<Profile />} />
             </Routes>
           );
         }}

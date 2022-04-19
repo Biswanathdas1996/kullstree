@@ -50,7 +50,7 @@ const Timeline = () => {
           })}
           <Grid item xs={12} sm={12} lg={12} md={12}>
             <button
-              className="btn btn-default btn-primary"
+              className="btn btn-default btn-secondary"
               style={{ float: "right", margin: 10 }}
               type="button"
               onClick={() => history("/trainings")}
@@ -72,7 +72,7 @@ const Timeline = () => {
           })}
           <Grid item xs={12} sm={12} lg={12} md={12}>
             <button
-              className="btn btn-default btn-primary"
+              className="btn btn-default btn-secondary"
               style={{ float: "right", margin: 10 }}
               type="button"
               onClick={() => history("/products")}
