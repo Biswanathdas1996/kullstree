@@ -5,15 +5,25 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 
+import SimpleImageSlider from "react-simple-image-slider";
+
+const images = [
+  { url: "/assets/images/341122-rural-women.jpg" },
+  { url: "/assets/images/slider1.jpg" },
+  { url: "/assets/images/four.jpg" },
+  { url: "/assets/images/SBI-LOGO-HISTORY.jpg" },
+];
+
 export default function ActionAreaCard() {
   return (
     <Card>
       <CardActionArea>
-        <CardMedia
-          component="img"
-          height="400"
-          image="/assets/images/341122-rural-women.jpg"
-          alt="green iguana"
+        <SimpleImageSlider
+          width="100%"
+          height={375}
+          images={images}
+          showBullets={true}
+          showNavs={true}
         />
       </CardActionArea>
     </Card>

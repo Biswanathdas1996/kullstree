@@ -75,42 +75,6 @@ const menuItemsData = [
   },
 ];
 
-const menuNFT = [
-  {
-    title: "Create NFT",
-    link: "/nft-mint",
-    icon: () => <CreateNewFolderIcon />,
-  },
-  {
-    title: "My NFT",
-    link: "/my-nft",
-    icon: () => <BallotIcon />,
-  },
-  {
-    title: "NFT Marketplace",
-    link: "/nft-market",
-    icon: () => <LocalGroceryStoreIcon />,
-  },
-];
-
-const menuTickets = [
-  {
-    title: "Create Ticket",
-    link: "/event/create",
-    icon: () => <NoteAddIcon />,
-  },
-  {
-    title: "Buy Ticket",
-    link: "/event/all",
-    icon: () => <AddBusinessIcon />,
-  },
-  {
-    title: "My Ticket",
-    link: "/event/my-tickets",
-    icon: () => <FactCheckIcon />,
-  },
-];
-
 export default function Layout({ body }) {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -151,6 +115,7 @@ export default function Layout({ body }) {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Kullstree
           </Typography>
+          <h5>Pin Code: 732000</h5>
         </Toolbar>
       </AppBar>
 
@@ -180,24 +145,6 @@ export default function Layout({ body }) {
         <Divider />
         <List>
           {menuItemsData.map((item, index) => (
-            <ListItem button key={index} onClick={() => navigate(item?.link)}>
-              <ListItemIcon>{item?.icon()}</ListItemIcon>
-              <ListItemText primary={item?.title} />
-            </ListItem>
-          ))}
-        </List>
-        <Divider />
-        <List>
-          {menuNFT.map((item, index) => (
-            <ListItem button key={index} onClick={() => navigate(item?.link)}>
-              <ListItemIcon>{item?.icon()}</ListItemIcon>
-              <ListItemText primary={item?.title} />
-            </ListItem>
-          ))}
-        </List>
-        <Divider />
-        <List>
-          {menuTickets.map((item, index) => (
             <ListItem button key={index} onClick={() => navigate(item?.link)}>
               <ListItemIcon>{item?.icon()}</ListItemIcon>
               <ListItemText primary={item?.title} />

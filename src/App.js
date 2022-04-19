@@ -5,6 +5,8 @@ import Registration from "./components/Registration";
 import Timeline from "./components/Timeline";
 import Layout from "./components/Layout";
 import Training from "./components/Training";
+import Products from "./components/Products";
+
 const App = () => {
   return (
     <>
@@ -16,6 +18,7 @@ const App = () => {
 
               <Route path="/register" element={<Registration />} />
               <Route path="/trainings" element={<Training />} />
+              <Route path="/products" element={<Products />} />
             </Routes>
           );
         }}

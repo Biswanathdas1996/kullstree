@@ -11,9 +11,9 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import ShareIcon from "@mui/icons-material/Share";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
 
-export default function RecipeReviewCard({ data }) {
+export default function RecipeReviewCard({ data, height }) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card>
       <CardHeader
         avatar={
           <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe">
@@ -24,8 +24,8 @@ export default function RecipeReviewCard({ data }) {
         subheader={data?.publishDate}
       />
       <iframe
-        width="350"
-        height="194"
+        width="100%"
+        height={height ? height : `230`}
         src={data?.video}
         title="YouTube video player"
         frameborder="0"
