@@ -99,7 +99,7 @@ export default function Layout({ body }) {
       <AppBar
         position="fixed"
         open={open}
-        style={{ backgroundColor: "rgb(124 0 124)", color: "#fff" }}
+        style={{ backgroundColor: "hotpink", color: "#fff" }}
       >
         <Toolbar>
           <IconButton

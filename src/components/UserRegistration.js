@@ -233,7 +233,8 @@ const UserRegistration = () => {
               <span className="input-group-btn">
                 <input
                   className="btn btn-default btn-primary"
-                  type="submit"
+                  type="button"
+                  onClick={() => history("/")}
                   value={"Submit"}
                 />
               </span>
