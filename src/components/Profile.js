@@ -36,7 +36,9 @@ const Profile = () => {
       </Grid>
       <Grid item xs={12} sm={12} lg={3} md={3}></Grid>
       <Grid item xs={12} sm={12} lg={12} md={12}>
-        <h3 style={{ margin: 20, marginBottom: 20 }}>Training certificates</h3>
+        <h3 style={{ marginTop: 20, marginBottom: 20 }}>
+          Training certificates
+        </h3>
       </Grid>
       <Grid item xs={12} sm={12} lg={3} md={3}>
         <Certificate
@@ -56,6 +58,18 @@ const Profile = () => {
           title="Basic details about lone "
         />
       </Grid>
+
+      <Grid item xs={12} sm={12} lg={12} md={12}>
+        <h3 style={{ marginTop: 20, marginBottom: 20 }}>Eligible Products</h3>
+      </Grid>
+
+      {productData.slice(0, 2).map((data, index) => {
+        return (
+          <Grid item xs={12} sm={12} lg={3} md={3}>
+            <Products data={data} elegible={true} />
+          </Grid>
+        );
+      })}
     </Grid>
   );
 };

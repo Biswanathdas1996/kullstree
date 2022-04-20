@@ -28,7 +28,7 @@ const trainingData = {
     "This impressive paella is a perfect party dish and a fun meal to cook together with your guests. Add 1 cup of frozen peas along with the mussels, if you like.",
 };
 
-export default function RecipeReviewCard({ data }) {
+export default function RecipeReviewCard({ data, elegible }) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -66,15 +66,24 @@ export default function RecipeReviewCard({ data }) {
             {data?.description}
           </Typography>
         </CardContent>
-
-        <button
-          className="btn btn-default btn-primary"
-          style={{ margin: 15 }}
-          type="button"
-          onClick={() => handleOpen()}
-        >
-          Open
-        </button>
+        {elegible ? (
+          <button
+            className="btn btn-default btn-primary"
+            style={{ margin: 15 }}
+            type="button"
+          >
+            Apply
+          </button>
+        ) : (
+          <button
+            className="btn btn-default btn-primary"
+            style={{ margin: 15 }}
+            type="button"
+            onClick={() => handleOpen()}
+          >
+            Open
+          </button>
+        )}
 
         <h5 style={{ fontSize: 15, margin: 20, float: "right" }}>
           Point:<b>{data?.point}</b>
