@@ -10,6 +10,7 @@ import Test from "./components/Test";
 import Profile from "./components/Profile";
 import Job from "./components/Job";
 import UserList from "./components/UserList";
+import Support from "./components/Support";
 
 const App = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
               <Route path="/profile" element={<Profile />} />
               <Route path="/job" element={<Job />} />
               <Route path="/users" element={<UserList />} />
+              <Route path="/support" element={<Support />} />
             </Routes>
           );
         }}

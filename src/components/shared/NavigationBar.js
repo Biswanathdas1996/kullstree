@@ -137,6 +137,13 @@ const ResponsiveAppBar = () => {
             >
               Job
             </Button>
+            <Button
+              key={8}
+              onClick={() => history("/support")}
+              sx={{ my: 2, color: "white", display: "block" }}
+            >
+              Support
+            </Button>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
