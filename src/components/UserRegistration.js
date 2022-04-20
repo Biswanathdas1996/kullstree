@@ -34,7 +34,7 @@ const UserRegistration = () => {
         background: "white",
       }}
     >
-      <h4>User Registration</h4>
+      <h4>Business Correspondence Registration</h4>
       <Formik
         initialValues={{
           name: "",

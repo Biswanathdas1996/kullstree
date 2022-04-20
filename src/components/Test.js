@@ -110,7 +110,8 @@ class Quiz extends React.Component {
           <button
             className="btn btn-default btn-secondary"
             style={{ margin: 10 }}
-            onClick={() => window.location.replace("/")}
+            onClick={() => window.location.replace("/profile")}
+            type="button"
           >
             Submit Test
           </button>

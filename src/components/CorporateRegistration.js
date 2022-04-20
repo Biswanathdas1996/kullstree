@@ -132,8 +132,9 @@ const CorporateRegistration = () => {
               <span className="input-group-btn">
                 <input
                   className="btn btn-default btn-primary"
-                  type="submit"
+                  type="button"
                   value={"Submit"}
+                  onClick={() => history("/users")}
                 />
               </span>
             </div>

@@ -66,8 +66,8 @@ export default function BasicTabs() {
               textColor="secondary"
               indicatorColor="secondary"
             >
-              <Tab label="User Registration" {...a11yProps(0)} />
-              <Tab label="Corporate Registration" {...a11yProps(1)} />
+              <Tab label="Business Correspondence " {...a11yProps(0)} />
+              <Tab label="Corporate " {...a11yProps(1)} />
             </Tabs>
           </Box>
           <TabPanel value={value} index={0}>

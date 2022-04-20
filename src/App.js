@@ -8,6 +8,8 @@ import Training from "./components/Training";
 import Products from "./components/Products";
 import Test from "./components/Test";
 import Profile from "./components/Profile";
+import Job from "./components/Job";
+import UserList from "./components/UserList";
 
 const App = () => {
   return (
@@ -23,6 +25,8 @@ const App = () => {
               <Route path="/products" element={<Products />} />
               <Route path="/test" element={<Test />} />
               <Route path="/profile" element={<Profile />} />
+              <Route path="/job" element={<Job />} />
+              <Route path="/users" element={<UserList />} />
             </Routes>
           );
         }}
