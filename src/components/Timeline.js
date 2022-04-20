@@ -4,6 +4,7 @@ import Box from "@mui/material/Box";
 import TrainingCard from "./shared/TrainingCard";
 import HomePageCard from "./shared/HomePageCard";
 import ProfileCard from "./shared/ProfileCard";
+import Job from "./Job";
 
 import Products from "./shared/ProductCard";
 
@@ -76,6 +77,18 @@ const Timeline = () => {
               style={{ float: "right", margin: 10 }}
               type="button"
               onClick={() => history("/products")}
+            >
+              View more
+            </button>
+          </Grid>
+
+          <Job />
+          <Grid item xs={12} sm={12} lg={12} md={12}>
+            <button
+              className="btn btn-default btn-secondary"
+              style={{ float: "right", margin: 10 }}
+              type="button"
+              onClick={() => history("/job")}
             >
               View more
             </button>

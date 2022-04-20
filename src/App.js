@@ -34,8 +34,7 @@ const App = () => {
       {/* <footer
         className="sticky bottom-0"
         style={{ background: "hotpink", padding: 20, color: "white" }}
-      >
-        <center>Kullstree</center>
+      ><center>Kullstree</center>
       </footer> */}
     </>
   );
