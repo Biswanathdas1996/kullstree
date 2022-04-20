@@ -4,11 +4,6 @@ import * as Yup from "yup";
 import { Card, Grid } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 
-const ValidateSchema = Yup.object().shape({
-  name: Yup.string().required("Name is required"),
-  contact: Yup.string().required("Contact number is required"),
-});
-
 const UserRegistration = () => {
   const [selectedFile, setSelectedFile] = useState();
   const [preview, setPreview] = useState();
@@ -37,10 +32,6 @@ const UserRegistration = () => {
       <h4>Business Correspondence Registration</h4>
       <Formik
         initialValues={{
-          name: "",
-
-          contact: "",
-
           attributes: [
             {
               trait_type: "",
@@ -48,7 +39,6 @@ const UserRegistration = () => {
             },
           ],
         }}
-        validationSchema={ValidateSchema}
         onSubmit={(values, { setSubmitting }) => {
           console.log("values=======>", values);
 
@@ -57,84 +47,14 @@ const UserRegistration = () => {
       >
         {({ touched, errors, isSubmitting, values }) => (
           <Form>
-            <div
-              className="form-group"
-              style={{ marginLeft: 10, marginTop: 10 }}
-            >
-              <Field
-                type="text"
-                name="name"
-                autoComplete="flase"
-                placeholder="Enter name"
-                className={`form-control text-muted ${
-                  touched.name && errors.name ? "is-invalid" : ""
-                }`}
-                style={{ marginRight: 10, padding: 9 }}
-              />
-            </div>
-
-            <div
-              className="form-group"
-              style={{ marginLeft: 10, marginTop: 10 }}
-            >
-              <Field
-                type="number"
-                name="contact"
-                autoComplete="flase"
-                placeholder="Enter contact number"
-                className={`form-control text-muted ${
-                  touched.price && errors.price ? "is-invalid" : ""
-                }`}
-                style={{ marginRight: 10, padding: 9 }}
-              />
-            </div>
-            <div
-              className="form-group"
-              style={{ marginLeft: 10, marginTop: 10 }}
-            >
-              <Field
-                type="text"
-                name="address"
-                autoComplete="flase"
-                placeholder="Enter address"
-                className={`form-control text-muted `}
-                style={{ marginRight: 10, padding: 9 }}
-              />
-            </div>
-            <div
-              className="form-group"
-              style={{ marginLeft: 10, marginTop: 10 }}
-            >
-              <Field
-                type="text"
-                name="address"
-                autoComplete="flase"
-                placeholder="Enter city/village name"
-                className={`form-control text-muted `}
-                style={{ marginRight: 10, padding: 9 }}
-              />
-            </div>
-            <div
-              className="form-group"
-              style={{ marginLeft: 10, marginTop: 10 }}
-            >
-              <Field
-                type="text"
-                name="address"
-                autoComplete="flase"
-                placeholder="Enter pin code"
-                className={`form-control text-muted `}
-                style={{ marginRight: 10, padding: 9 }}
-              />
-            </div>
             <div className="form-group">
               <span className="input-group-btn">
                 <div style={{ marginLeft: 10, marginTop: 10 }}>
-                  <p>Upload Adhaar Card</p>
+                  <p>Take picture of Aadhaar Card</p>
                   <input type="file" onChange={onFileChange} />
                 </div>
 
-                {selectedFile && (
+                {/* {selectedFile && (
                   <center>
                     <img
                       src={preview}
@@ -146,8 +66,102 @@ const UserRegistration = () => {
                       }}
                     />
                   </center>
-                )}
+                )} */}
               </span>
+            </div>
+
+            {selectedFile && (
+              <>
+                <div
+                  className="form-group"
+                  style={{ marginLeft: 10, marginTop: 10 }}
+                >
+                  <b>Name</b>
+                  <Field
+                    type="text"
+                    value="Biswanath Das"
+                    autoComplete="flase"
+                    placeholder="Enter city/village name"
+                    className={`form-control text-muted `}
+                    style={{ marginRight: 10, padding: 9 }}
+                  />
+                </div>
+                <div
+                  className="form-group"
+                  style={{ marginLeft: 10, marginTop: 10 }}
+                >
+                  <b>Fathers Name</b>
+                  <Field
+                    type="text"
+                    value="Shuvendu sekhar Das"
+                    autoComplete="flase"
+                    placeholder="Enter city/village name"
+                    className={`form-control text-muted `}
+                    style={{ marginRight: 10, padding: 9 }}
+                  />
+                </div>
+                <div
+                  className="form-group"
+                  style={{ marginLeft: 10, marginTop: 10 }}
+                >
+                  <b>Address 1</b>
+                  <Field
+                    type="text"
+                    value="Nachinda, Marishda"
+                    autoComplete="flase"
+                    placeholder="Enter city/village name"
+                    className={`form-control text-muted `}
+                    style={{ marginRight: 10, padding: 9 }}
+                  />
+                </div>
+                <div
+                  className="form-group"
+                  style={{ marginLeft: 10, marginTop: 10 }}
+                >
+                  <b>State</b>
+                  <Field
+                    type="text"
+                    value="West Bengal"
+                    autoComplete="flase"
+                    placeholder="Enter city/village name"
+                    className={`form-control text-muted `}
+                    style={{ marginRight: 10, padding: 9 }}
+                  />
+                </div>
+                <div
+                  className="form-group"
+                  style={{ marginLeft: 10, marginTop: 10 }}
+                >
+                  <b>Pin code</b>
+                  <Field
+                    type="text"
+                    value="721444"
+                    autoComplete="flase"
+                    placeholder="Enter city/village name"
+                    className={`form-control text-muted `}
+                    style={{ marginRight: 10, padding: 9 }}
+                  />
+                </div>
+                <div
+                  className="form-group"
+                  style={{ marginLeft: 10, marginTop: 10 }}
+                >
+                  <b>Contact No (As per Aadhaar )</b>
+                  <Field
+                    type="text"
+                    value="8001691299"
+                    autoComplete="flase"
+                    placeholder="Enter city/village name"
+                    className={`form-control text-muted `}
+                    style={{ marginRight: 10, padding: 9 }}
+                  />
+                </div>
+              </>
+            )}
+
+            <div style={{ marginLeft: 10, marginTop: 10 }}>
+              <p>Take selfie</p>
+              <input type="file" />
             </div>
 
             <div className="form-group" style={{ padding: 10 }}>
