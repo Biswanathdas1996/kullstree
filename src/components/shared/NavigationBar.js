@@ -12,26 +12,18 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import { useNavigate } from "react-router-dom";
-
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+import VoiceFile from "../../VoiceFile/Create";
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
-  const [anchorElUser, setAnchorElUser] = React.useState(null);
+
   let history = useNavigate();
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
   };
 
   return (
@@ -144,6 +136,10 @@ const ResponsiveAppBar = () => {
             >
               Support
             </Button>
+          </Box>
+
+          <Box sx={{ flexGrow: 0 }}>
+            <VoiceFile />
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
