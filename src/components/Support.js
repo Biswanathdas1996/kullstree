@@ -94,19 +94,25 @@ const Timeline = () => {
                     <ListItem disablePadding>
                       <ListItemButton>
                         <ListItemText primary="Trash Hathi" />
-                        <ListItemText secondary=" +91 90005439877" />
+                        <a href="whatsapp://send?abid=90005439877&text=Hello%2C%20World!">
+                          <ListItemText secondary=" +91 90005439877" />
+                        </a>
                       </ListItemButton>
                     </ListItem>
                     <ListItem disablePadding>
                       <ListItemButton component="a" href="#simple-list">
                         <ListItemText primary="Samplm Hathi" />
-                        <ListItemText secondary=" +91 90005439870" />
+                        <a href="whatsapp://send?abid=90005439877&text=Hello%2C%20World!">
+                          <ListItemText secondary=" +91 90005436666" />
+                        </a>
                       </ListItemButton>
                     </ListItem>
                     <ListItem disablePadding>
                       <ListItemButton component="a" href="#simple-list">
                         <ListItemText primary="Samplm Saha" />
-                        <ListItemText secondary=" +91 90005439879" />
+                        <a href="whatsapp://send?abid=90005439877&text=Hello%2C%20World!">
+                          <ListItemText secondary=" +91 90005439555" />
+                        </a>
                       </ListItemButton>
                     </ListItem>
                   </List>

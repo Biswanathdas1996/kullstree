@@ -76,6 +76,20 @@ const UserRegistration = () => {
                   className="form-group"
                   style={{ marginLeft: 10, marginTop: 10 }}
                 >
+                  <b>Aadhaar number</b>
+                  <Field
+                    type="text"
+                    value="5689-7705-3197"
+                    autoComplete="flase"
+                    placeholder="Enter city/village name"
+                    className={`form-control text-muted `}
+                    style={{ marginRight: 10, padding: 9 }}
+                  />
+                </div>
+                <div
+                  className="form-group"
+                  style={{ marginLeft: 10, marginTop: 10 }}
+                >
                   <b>Name</b>
                   <Field
                     type="text"
