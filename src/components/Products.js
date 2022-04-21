@@ -1,6 +1,6 @@
 import React from "react";
-import { Card, Grid } from "@mui/material";
-import Box from "@mui/material/Box";
+import { Grid } from "@mui/material";
+
 import Products from "./shared/ProductCard";
 import { productData } from "../mock/ProductData";
 

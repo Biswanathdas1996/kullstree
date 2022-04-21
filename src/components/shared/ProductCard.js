@@ -6,7 +6,6 @@ import CardMedia from "@mui/material/CardMedia";
 import Box from "@mui/material/Box";
 import Modal from "@mui/material/Modal";
 import TrainingCard from "./TrainingCard";
-import { useNavigate } from "react-router-dom";
 
 const style = {
   position: "absolute",
@@ -32,7 +31,7 @@ export default function RecipeReviewCard({ data, elegible }) {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  let history = useNavigate();
+
   return (
     <>
       <Modal

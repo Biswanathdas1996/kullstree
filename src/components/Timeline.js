@@ -1,6 +1,5 @@
 import React from "react";
-import { Card, Grid } from "@mui/material";
-import Box from "@mui/material/Box";
+import { Grid } from "@mui/material";
 import TrainingCard from "./shared/TrainingCard";
 import HomePageCard from "./shared/HomePageCard";
 import ProfileCard from "./shared/ProfileCard";

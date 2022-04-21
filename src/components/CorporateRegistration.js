@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { Formik, Form, Field, FieldArray } from "formik";
+import React from "react";
+import { Formik, Form, Field } from "formik";
 import * as Yup from "yup";
-import { Card, Grid } from "@mui/material";
+
 import { useNavigate } from "react-router-dom";
 
 const ValidateSchema = Yup.object().shape({
@@ -10,23 +10,7 @@ const ValidateSchema = Yup.object().shape({
 });
 
 const CorporateRegistration = () => {
-  const [selectedFile, setSelectedFile] = useState();
-  const [preview, setPreview] = useState();
   let history = useNavigate();
-
-  useEffect(() => {
-    if (!selectedFile) {
-      setPreview(undefined);
-      return;
-    }
-    const objectUrl = URL.createObjectURL(selectedFile);
-    setPreview(objectUrl);
-    return () => URL.revokeObjectURL(objectUrl);
-  }, [selectedFile]);
-
-  const onFileChange = (event) => {
-    setSelectedFile(event.target.files[0]);
-  };
 
   return (
     <div

@@ -1,14 +1,11 @@
 import React from "react";
-import { Card, Grid } from "@mui/material";
-import Box from "@mui/material/Box";
-import TrainingCard from "./shared/TrainingCard";
-import HomePageCard from "./shared/HomePageCard";
+import { Grid } from "@mui/material";
+
 import ProfileCard from "./shared/ProfileCard";
 import Certificate from "./shared/Certificate";
 
 import Products from "./shared/ProductCard";
 
-import { trainingData } from "../mock/TrainingData";
 import { productData } from "../mock/ProductData";
 
 import { useNavigate } from "react-router-dom";

@@ -2,15 +2,10 @@ import * as React from "react";
 import Card from "@mui/material/Card";
 import CardHeader from "@mui/material/CardHeader";
 import CardContent from "@mui/material/CardContent";
-import CardActions from "@mui/material/CardActions";
 import Avatar from "@mui/material/Avatar";
-import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import { red } from "@mui/material/colors";
-import FavoriteIcon from "@mui/icons-material/Favorite";
-import ShareIcon from "@mui/icons-material/Share";
 import Box from "@mui/material/Box";
-import { useNavigate } from "react-router-dom";
 import Modal from "@mui/material/Modal";
 import TrainingCard from "./TrainingCard";
 
@@ -29,11 +24,8 @@ const style = {
 export default function RecipeReviewCard({ data, height, assesment }) {
   const [open, setOpen] = React.useState(false);
 
-  const handleOpen = () => {
-    setOpen(true);
-  };
   const handleClose = () => setOpen(false);
-  let history = useNavigate();
+
   return (
     <>
       <Modal

@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Grid } from "@mui/material";
+import { Grid } from "@mui/material";
 import JobCard from "./shared/JobCard";
 import { JobData } from "../mock/JobData";
 

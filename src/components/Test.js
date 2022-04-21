@@ -78,13 +78,13 @@ class Quiz extends React.Component {
   } // end constructor
 
   handleClick(choice) {
-    if (choice == this.state.dataSet[this.state.current].correct) {
+    if (choice === this.state.dataSet[this.state.current].correct) {
       this.setState({ correct: this.state.correct + 1 });
     } else {
       this.setState({ incorrect: this.state.incorrect + 1 });
     }
 
-    if (this.state.current == 9) {
+    if (this.state.current === 9) {
       this.setState({ current: 0 });
       this.setState({ incorrect: 0 });
       this.setState({ correct: 0 });
